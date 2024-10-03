@@ -1,4 +1,8 @@
 package com.example.spring.catalogservice.domain;
 
-public record Book() {
-}
+public record Book(
+   String isbn,
+   String title,
+   String author,
+   Double price
+) {}

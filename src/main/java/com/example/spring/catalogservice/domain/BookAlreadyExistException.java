@@ -1,4 +1,7 @@
 package com.example.spring.catalogservice.domain;
 
-public class BookAlreadyExistException {
+public class BookAlreadyExistException extends RuntimeException {
+    public BookAlreadyExistException(String isbn) {
+        super("Book with ISBN " + isbn + " already exists.");
+    }
 }
