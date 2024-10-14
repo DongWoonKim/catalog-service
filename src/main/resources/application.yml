@@ -5,4 +5,4 @@ server:
     keep-alive-timeout: 15s
     threads:
       max: 50
-      min-spare: 10
+      min-spare: 5
