@@ -23,6 +23,20 @@ spring:
         initial-interval: 1000
         max-interval: 2000
         multiplier: 1.1
+  datasource:
+    url: jdbc:mysql://localhost:3307/catalog?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC&characterEncoding=UTF-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 1234
+    hikari:
+      connection-timeout: 2000
+      maximum-pool-size: 5
 
 polar:
   greeting: "Welcome to the local book catalog!"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
