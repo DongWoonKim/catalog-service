@@ -9,6 +9,7 @@ import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.annotation.Version;
+import org.springframework.data.relational.core.mapping.Column;
 
 import java.time.Instant;
 
@@ -34,7 +35,9 @@ public record Book(
         )
         Double price,
         @CreatedDate
+        @Column("create_at")
         Instant createdAt,
+        @Column("last_modified_at")
         @LastModifiedDate
         Instant lastModifiedAt,
         @Version
