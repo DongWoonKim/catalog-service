@@ -36,10 +36,12 @@ public class BookService {
         return bookRepository.findByIsbn(isbn)
                 .map(existingBook -> {
                     Book build = Book.builder()
+                            .id(existingBook.id())
                             .isbn(existingBook.isbn())
                             .title(book.title())
                             .author(book.author())
                             .price(book.price())
+                            .version(existingBook.version())
                             .build();
                     return bookRepository.save(build);
                 })
