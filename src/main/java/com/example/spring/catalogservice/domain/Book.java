@@ -5,8 +5,12 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Positive;
 import lombok.Builder;
+import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.annotation.Version;
+
+import java.time.Instant;
 
 @Builder
 public record Book(
@@ -29,7 +33,10 @@ public record Book(
                 message = "The book price must be greater than zero."
         )
         Double price,
-
+        @CreatedDate
+        Instant createdAt,
+        @LastModifiedDate
+        Instant lastModifiedAt,
         @Version
         int version
 ) {}

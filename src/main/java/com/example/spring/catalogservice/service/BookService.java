@@ -41,6 +41,8 @@ public class BookService {
                             .title(book.title())
                             .author(book.author())
                             .price(book.price())
+                            .createdAt(existingBook.createdAt())
+                            .lastModifiedAt(existingBook.lastModifiedAt())
                             .version(existingBook.version())
                             .build();
                     return bookRepository.save(build);
