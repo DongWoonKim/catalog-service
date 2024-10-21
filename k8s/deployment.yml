@@ -28,7 +28,7 @@ spec:
             - name: BPL_JVM_THREAD_COUNT
               value: "50"
             - name: SPRING_CLOUD_CONFIG_URI
-              value: http://config-service
+              value: http://config-service:8888
             - name: SPRING_DATASOURCE_URL
               value: jdbc:mysql://polar-mysql/catalog
             - name: SPRING_PROFILES_ACTIVE
