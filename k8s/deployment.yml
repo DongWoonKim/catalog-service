@@ -30,21 +30,6 @@ spec:
             - name: SPRING_CLOUD_CONFIG_URI
               value: http://config-service
             - name: SPRING_DATASOURCE_URL
-              value: jdbc:postgresql://polar-mysql/catalog
+              value: jdbc:mysql://polar-mysql/catalog
             - name: SPRING_PROFILES_ACTIVE
               value: testdata
-
----
-
-apiVersion: v1
-kind: Service
-metadata:
-  name: catalog-service
-spec:
-  selector:
-    app: catalog-service
-  ports:
-    - protocol: TCP
-      port: 9001     # 서비스가 노출할 포트
-      targetPort: 9001   # Pod에서 사용하는 포트
-  type: ClusterIP     # 기본 설정으로, 클러스터 내부에서만 접근 가능
