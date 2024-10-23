@@ -21,6 +21,7 @@ spring:
   cloud:
     config:
       uri: http://config-service:8888
+#      uri: http://localhost:8888
       request-connect-timeout: 5000
       request-read-timeout: 5000
       fail-fast: true
@@ -31,6 +32,7 @@ spring:
         multiplier: 1.1
   datasource:
     url: jdbc:mysql://polar-mysql:3307/catalog?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC&characterEncoding=UTF-8
+#    url: jdbc:mysql://localhost:3307/catalog?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC&characterEncoding=UTF-8
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: 1234
