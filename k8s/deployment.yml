@@ -30,6 +30,6 @@ spec:
             - name: SPRING_CLOUD_CONFIG_URI
               value: http://config-service:8888
             - name: SPRING_DATASOURCE_URL
-              value: jdbc:mysql://polar-mysql/catalog
+              value: jdbc:mysql://polar-mysql:3306/catalog?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC&characterEncoding=UTF-8
             - name: SPRING_PROFILES_ACTIVE
               value: testdata
