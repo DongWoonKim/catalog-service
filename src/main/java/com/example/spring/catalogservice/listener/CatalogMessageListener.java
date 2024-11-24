@@ -19,6 +19,7 @@ public class CatalogMessageListener {
     public void handleProductUpdate(Book book) {
         log.info("Received product update: {}", book);
         bookService.addBookToCatalog(book);
+        log.info("Added product to catalog success!");
     }
 
 }

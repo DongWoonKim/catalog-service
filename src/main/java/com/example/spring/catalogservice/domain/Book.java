@@ -11,6 +11,7 @@ import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.annotation.Version;
 import org.springframework.data.relational.core.mapping.Column;
 
+import java.io.Serializable;
 import java.time.Instant;
 
 @Builder
@@ -43,4 +44,4 @@ public record Book(
         Instant lastModifiedAt,
         @Version
         int version
-) {}
+) implements Serializable {}
